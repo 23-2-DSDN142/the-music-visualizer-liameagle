@@ -30,15 +30,27 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
 		  text(words, width*.5, 560);
 		  
 		 fill(200);
-		 rect(width*.5,470,40,40);//play
+		 rect(width*.5,470,40,40);//play button
 		 fill(0);
-		 triangle(width*.5+10,470,width*.5-8,470-10,width*.5-8,470+10);
+		 triangle(width*.5+10,470,width*.5-8,470-10,width*.5-8,470+10);//play symbol
+		 triangle(width*.5-51,470,width*.5-40,470-8,width*.5-40,470+8);//rewind symbol
+		 triangle(width*.5-40,470,width*.5-29,470-8,width*.5-29,470+8);
+		 triangle(width*.5+51,470,width*.5+40,470-8,width*.5+40,470+8);//ff symbol
+		 triangle(width*.5+40,470,width*.5+29,470-8,width*.5+29,470+8);
+		 triangle(width*.5+91,470,width*.5+80,470-8,width*.5+80,470+8);//skip symbol
+		 triangle(width*.5+80,470,width*.5+69,470-8,width*.5+69,470+8);
+		 strokeWeight(2.5);
+		 line(width*.5+91,461,width*.5+91,479);
+		 triangle(width*.5-91,470,width*.5-80,470-8,width*.5-80,470+8);//skip symbol
+		 triangle(width*.5-80,470,width*.5-69,470-8,width*.5-69,470+8);
+		 line(width*.5-91,461,width*.5-91,479);
+		 strokeWeight(1);
 		 noFill();
 		 rect(width*.5+40,470,40,40);//skip
 		 rect(width*.5-40,470,40,40);//back
 		 rect(width*.5+80,470,40,40);//skip
 		 rect(width*.5-80,470,40,40);//back
-		 
+	fill(0,255,0);
 		  //status screen
 		  textSize(7);
 		  text("Now Playing... SIRENS - Travis Scott", width*.5, 370);
